@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main (void) {
-
+    // obviously bad variable naming
     int count, result, number;
     result = 1;
     count = 10;
@@ -13,7 +13,7 @@ printf("---        ----------\n");
 
 for (int i = 0; i < count; i++)
 {
-    
+    // Before i is incremented we have to add 1
     number = ((count - i) + 1);
     
     result = 1;
@@ -23,7 +23,7 @@ for (int i = 0; i < count; i++)
         
         --number;
     }
-
+    // After i is incremented 
     printf("%2i         %i\n", (count - i)  , result);
 }
     
