@@ -10,7 +10,7 @@ int main(void)
     char operator;
     bool quit = 0;
 
-    printf("Begin Calculations\n;");
+    printf("Begin Calculations\n");
     while (quit == 0){
         printf("+ - * / S E\n");
         scanf("%f %c", &number, &operator);
@@ -19,6 +19,12 @@ int main(void)
         case 'S' :
             accumulator = number;
             printf("%.5f\n", accumulator);
+            number = 0;
+            operator = '0';
+            break;
+        case '+' :
+            printf("%.5f + %.5f = %.5f\n", number, accumulator, (number + accumulator));
+            accumulator = (number + accumulator);
             number = 0;
             operator = '0';
             break;
