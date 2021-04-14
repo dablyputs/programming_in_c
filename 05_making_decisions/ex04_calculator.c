@@ -19,13 +19,15 @@ int main(void)
         case 'S' :
             accumulator = number;
             printf("%.5f\n", accumulator);
+            number = 0;
+            operator = '0';
             break;
         case 'E' :
-            exit(0);
+            quit = 1;
             break;
         
         default:
-            exit(1);
+            quit = 1;
             break;
         }
     }
