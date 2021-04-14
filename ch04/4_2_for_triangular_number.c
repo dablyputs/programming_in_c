@@ -12,5 +12,5 @@ int main (void) {
         triangularNumber = triangularNumber + n;
     }
     
-    printf("The 200th triangular number is %i\n", triangularNumber);
+    printf("%-2i			 %i\n", n, triangularNumber);
 }

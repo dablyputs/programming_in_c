@@ -8,7 +8,7 @@ int main()
 
     printf("TABLE OF TRIANGULAR NUMBERS\n\n");
     printf("n   Sum from 1 to n\n");
-    printf("--- ---------------");
+    printf("--- ---------------\n");
 
     triangularNumber = 0;
 
