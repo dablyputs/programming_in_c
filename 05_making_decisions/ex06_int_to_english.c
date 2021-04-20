@@ -5,27 +5,37 @@
 int main(void)
 {
 
-    int left_digit;
-    double number;
-    left_digit = 0;
+    int num, digit;
+    int reversed = 0, backupZero = 0;
 
     printf("Enter a number greater than 10: ");
-    scanf("%lf", &number);
+    scanf("%d", &num);
 
-    while (number >= 10)
+    if (num == 0)
     {
-        number = number / 10;
-        printf("Number is now %lf\n", number);
+        printf("zero"); // In case the input is just "0"
     }
-    while (number > 0)
-    {
-        left_digit = number;
-        printf("left_digit is %i\n", left_digit);
 
-        switch (left_digit)
+    while (num > 0)
+    { // Loop to reverse the integer
+        digit = num % 10;
+        reversed = (reversed * 10) + digit;
+        if ((reversed == 0) && (digit == 0))
+        {
+            ++backupZero; // Use this to add extra zeroes later
+        }
+
+        num /= 10;
+    }
+
+    while (reversed)
+    {
+        digit = reversed % 10;
+        reversed /= 10;
+
+        switch (digit)
         {
         case 0:
-            printf("zero ");
             break;
         case 1:
             printf("one ");
@@ -57,9 +67,12 @@ int main(void)
         default:
             break;
         }
-        printf("\n(%lf * 10) - 10 =",number);
-        number = (number * 10) - 10;
-        printf(" %lf\n", number);
+    }
+
+    while (backupZero > 0)
+    {
+        printf("zero "); // Prints the extra zeroes at the end
+        --backupZero;
     }
 
     printf("\n");
