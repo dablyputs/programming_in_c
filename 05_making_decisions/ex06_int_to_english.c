@@ -36,6 +36,7 @@ int main(void)
         switch (digit)
         {
         case 0:
+            printf("zero ");
             break;
         case 1:
             printf("one ");
