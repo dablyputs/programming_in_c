@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
         ratingCounters[i]= 0;
     }
 
-    printf("Enter your respons\n");
+    printf("Enter your response: ");
 
     for (i = 1; i <= 20; ++i){
         scanf("%i", &response);
