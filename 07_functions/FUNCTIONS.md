@@ -9,3 +9,6 @@ Here are some reminders and suggestions about functions:
 3. When defining a function that doesn’t return a value, define it as void.
 4. The compiler converts your arguments to agree with the ones the function expects only if you have previously defined or declared the function.
 5. To play it safe, declare all functions in your program, even if they are defined before they are called. (You might decide later to move them somewhere else in your file or even to another file.)
+
+
+If a function changes the value of an array element, that change is made to the original array that was passed to the function. This change remains in effect even after the function has completed execution and has returned to the calling routine. The discussion about changing array values in a function applies only to entire arrays that are passed as arguments, and not to individual elements, whose values are copied into the corresponding formal parameters and, therefore, cannot be permanently changed by the function.
