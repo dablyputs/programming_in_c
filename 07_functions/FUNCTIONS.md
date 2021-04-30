@@ -12,3 +12,9 @@ Here are some reminders and suggestions about functions:
 
 
 If a function changes the value of an array element, that change is made to the original array that was passed to the function. This change remains in effect even after the function has completed execution and has returned to the calling routine. The discussion about changing array values in a function applies only to entire arrays that are passed as arguments, and not to individual elements, whose values are copied into the corresponding formal parameters and, therefore, cannot be permanently changed by the function.
+
+Helpful discussion for ambiguous or confusing instructions on exercise 4:
+
+https://stackoverflow.com/questions/38465282/comparing-the-ratio-of-two-values-to-1
+
+https://www.reddit.com/r/cs50/comments/21gy72/suggested_reading_i_am_having_a_little_trouble/
