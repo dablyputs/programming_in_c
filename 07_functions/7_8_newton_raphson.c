@@ -1,4 +1,4 @@
-// Function to calculate the absolute value of a number
+// Function to calculate the absolute value of a number using Newton Method
 
 #include <stdio.h>
 
