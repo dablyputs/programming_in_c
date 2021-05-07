@@ -16,6 +16,8 @@ To be able to define the [absoluteValue()](https://github.com/dablyputs/programm
 ### Passing Arrays to Functions
 If an entire array is passed to a function and the function changes the value of an array element, that change is made to the original array that was passed to the function. This change remains in effect even after the function has completed execution and has returned to the calling routine. The discussion about changing array values in a function applies only to entire arrays that are passed as arguments, and not to individual elements, whose values are copied into the corresponding formal parameters and, therefore, cannot be permanently changed by the function.
 
+To pass an array to a function, it is only necessary to list the name of the array, without any subscripts, inside the call to the function.
+
 Helpful discussions for ambiguous or confusing instructions on exercise 4:
 
 * [stackexchange](https://stackoverflow.com/questions/38465282/comparing-the-ratio-of-two-values-to-1)

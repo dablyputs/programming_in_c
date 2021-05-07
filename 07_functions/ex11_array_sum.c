@@ -16,7 +16,7 @@ int arraySum(int numbersArray[], int totalIndex)
 
 int main()
 {
-    int numbersArray[4] = {1, 1, 1, 1};
+    int numbersArray[4] = {1, 7, 9, 11};
     int totalIndex = 4;
 
     printf("Sum of array is %i\n", arraySum(numbersArray, totalIndex));
