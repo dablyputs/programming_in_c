@@ -2,7 +2,9 @@
 
 int main(void)
 {
-    int i, x, y, nRows, nCols;
+    int nRows, nCols;
+    // Start array at 1
+    int i = 1;
 
     printf("Rows: ");
     scanf("%i", &nRows);
@@ -11,25 +13,25 @@ int main(void)
 
     int array[nRows][nCols], matrix[nCols][nRows];
     
-    // Start array at 1
-    i = 1;
-
     void displayMatrix(int r, int c, int array[r][c]);
     void transposeMatrix(int c, int r, int array[r][c], int matrix[c][r]);
 
-    for (x = 0; x < nRows; x++)
+    // Fill the array with integers
+    for (int x = 0; x < nRows; x++)
     {
-        for (y = 0; y < nCols; y++)
+        for (int y = 0; y < nCols; y++)
         {
             array[x][y] = i;
             ++i;
         }
     }
+    
     // Only pass the array name in the function call
     displayMatrix(nRows, nCols, array);
     printf("\n\n");
-    transposeMatrix(nRows, nCols, array, matrix);
-    displayMatrix(nRows, nCols, matrix);
+    // Switch columns and rows here or in the function body
+    transposeMatrix(nCols, nRows, array, matrix);
+    displayMatrix(nCols, nRows, matrix);
 
     return 0;
 }
