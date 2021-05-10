@@ -7,10 +7,9 @@ int main(void)
                         int scalar);
     void displayMatrix(int nRows, int nCols, int matrix[nRows][nCols]);
     int sampleMatrix[3][5] =
-        {
-            {7, 16, 55, 13, 12},
-            {12, 10, 52, 0, 7},
-            {-1, 1, 2, 4, 9}};
+        {{7, 16, 55, 13, 12},
+         {12, 10, 52, 0, 7},
+         {-1, 1, 2, 4, 9}};
 
     printf("Original matirx:\n");
     displayMatrix(3, 5, sampleMatrix);
@@ -28,7 +27,7 @@ int main(void)
 
 //Funciton to multiply a matrix by a scalar
 
-void scalarMultiply (int nRows, int nCols,
+void scalarMultiply(int nRows, int nCols,
                     int matrix[nRows][nCols], int scalar)
 {
     int row, column;
@@ -42,7 +41,7 @@ void scalarMultiply (int nRows, int nCols,
     }
 }
 
-void displayMatrix (int nRows, int nCols, int matrix[nRows][nCols])
+void displayMatrix(int nRows, int nCols, int matrix[nRows][nCols])
 {
     int row, column;
 
@@ -52,7 +51,6 @@ void displayMatrix (int nRows, int nCols, int matrix[nRows][nCols])
         {
             printf("%5i", matrix[row][column]);
         }
-     printf("\n");   
+        printf("\n");
     }
-    
 }
