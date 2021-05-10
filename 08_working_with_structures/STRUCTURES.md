@@ -15,9 +15,9 @@ eg:
 
 is legal. So is:
 
-`struct
-{
-    int month;
-    int day;
-    int year;
-} dates[100];`
+    struct
+    {
+        int month;
+        int day;
+        int year;
+    } dates[100];`
