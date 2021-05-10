@@ -5,7 +5,7 @@ You can declare instances of a structure at the time it is defined.
 
 eg:
 
-   struct date
+    struct date
     {
         int month;
         int day;
