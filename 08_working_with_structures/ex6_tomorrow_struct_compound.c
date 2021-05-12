@@ -1,6 +1,4 @@
-// Program to determine tomorrow's date using Compound Literals
-// inside dateUpdate
-// This will also be exercise 6.
+// Program to determine tomorrow's date
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -13,12 +11,12 @@ struct date
 };
 
 // Function to calculate tomorrow's date
-
+// Using Compound literals
 struct date dateUpdate(struct date today)
 {
     struct date tomorrow;
     int numberOfDays(struct date d);
-
+    // Using Compound literals
     if (today.day != numberOfDays(today))
     {
         tomorrow = (struct date) {
@@ -28,18 +26,18 @@ struct date dateUpdate(struct date today)
         };
     }
     else if (today.month == 12) // end of year
-    {
+    {  // Using Compound literals
         tomorrow = (struct date) { 1, 1, today.year + 1};
     }
     else // end of month
-    {
+    { // Using Compound literals
         tomorrow = (struct date) {today.month + 1, 1, today.year};
     }
 
     return tomorrow;
 }
 
-// Function ton find the number of days in a month
+// Function to find the number of days in a month
 
 int numberOfDays(struct date d)
 {
@@ -61,7 +59,6 @@ int numberOfDays(struct date d)
 }
 
 // Function to determine if it's a leap year
-
 bool isLeapYear(struct date d)
 {
     bool leapYearFlag;
