@@ -36,7 +36,6 @@ void insertString(char string[], char subString[], int position)
     for (j = 0; alphabetic(string[i]); ++j)
     {
         string[i] = subString[j];
-        //printf("Appending %c to %s\n", subString[j], string);
         ++i;
     }
 
@@ -45,7 +44,6 @@ void insertString(char string[], char subString[], int position)
     for (j = 0; tempString[j] != '\0'; ++j)
     {
         string[i] = tempString[j];
-        //printf("Appending %c to %s\n", tempString[j], string);
         ++i;
     }
 
