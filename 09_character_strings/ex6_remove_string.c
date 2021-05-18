@@ -2,31 +2,38 @@
 
 #include <stdio.h>
 
-void removeString(char string[], int startIndex, int endIndex)
+
+// Functions
+void removeString(char [], int, int);
+int stringLength(const char []);
+void removeString(char source[], int position, int nCharacters)
 {
-    int i, e = startIndex + endIndex;
-    static char tempString[80];
-    tempString[0] = '\0';
+    int i, length;
 
-    for (i = 0;  string[startIndex + i] != '\0'; ++i)
+    // copy characters (including '\0') from index i to pos 
+    length = stringLength(source);
+    for (i = position + nCharacters; i <= length; ++i)
     {
-        tempString[i] = string[e];
-        printf("I'm writing %c to %s\n", string[e], tempString);
-        ++e;
-    }
-
-    tempString[i] = '\0';
+        source[position++] = source[i];
+    } 
 }
 
-int main(void)
+int stringLength(const char string[])
 {
-    char string[] = "the wrong son";
-    printf("%s\n", string);
-    removeString(string, 4, 6);
-    printf("%s\n", string);
-    removeString(string, 0, 4);
-    printf("%s\n", string);
-    //removeString(string, 0, 3);
-    //printf("%s\n", string);
-    return 0;
+    int stringSize;
+    
+    for (stringSize = 0; string[stringSize] != '\0'; ++stringSize)
+        ;
+
+    return stringSize;
+}
+
+int main(void) 
+{	
+	char str[] = "the wrong son";
+
+	removeString(str, 10 , 3);
+	printf("%s\n", str); 
+
+	return 0;
 }

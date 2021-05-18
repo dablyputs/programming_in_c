@@ -1,50 +1,30 @@
 // Function to search for a substring in a string
 #include <stdio.h>
-#include <stdbool.h>
 
-
-int findString(char string[], char subString[])
+int findString(const char source[], const char subString[])
 {
-    int i, j, position;
-    position = -1;
-    j = 0;
+    int i, j, k;
 
-    for (i = 0; string[i] != '\0'; i++)
+    for (i = 0; source[i] != '\0'; i++)
     {
-        if (subString[j] == string[i])
+        for (j = i, k = 0; source[j] != '\0' && source[j] == subString[k]; ++j, ++k )
+            ;
+        if (subString[k] == '\0') // Found match
         {
-            position = i;
-            while (position != -1)
-            {
-                if (subString[j] == '\0')
-                { // Matched to end of substring, return
-                    return position;
-                }
-                else if (subString[j] == string[position + j])
-                { // Keep going if we match 
-                    ++j;
-                }
-                else
-                { // Not a match, start over and return 
-                    j = 0;
-                    position = -1;
-                }
-            }   
-        }
+            return i; // Return position of match
+        }     
     }
-
-    return position;
+    return -1; // Not found
 }
 
 int main(void)
 {
-    
-    char subString[] = "cat";
+    char subString[] = "123";
     char string[] = "The 123 house with the brown fence is half way down the block";
     
     if (findString(string, subString) >= 0)
     {
-        printf("found %s\n", subString);
+        printf("found %s at positon\n", subString);
     } else {
         printf("I didn't find %s", subString);
     }
