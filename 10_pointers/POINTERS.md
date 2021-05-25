@@ -31,3 +31,24 @@ or
     textPtr = &text[0];
 
 Which you choose is a matter of taste.
+
+## Constant Character Strings and Pointers
+* When a constant character string is passed as a function argument, what is actually passed is a pointer to the characxter string. Whever a constant chracter string is used in C, it is a pointer to that character string that is produced. Eg:
+
+    char *textPtr;
+    textPtr = "A character string.";
+
+assigns to textPtr a pointer to the constant charaster string "A character string." This type of assignment is not valid with a character array. Eg:
+
+    char text[80];
+    text = "This is not valid.";
+
+is an invalid assignment statement. The only time C will permit this type of assignment to a character array is when initializing it. Eg:
+
+    char text[80] = "This is okay.";
+
+Initializing an array in this manner does not store a pointer to the string "This is okay." It produces a pointer to the actual characters themselves inside the elements of the text array. Eg:
+
+    char *text = "This is okay.";
+
+assigns to text a pointer to the character string "This is okay."
