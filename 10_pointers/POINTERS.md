@@ -33,9 +33,10 @@ or
 Which you choose is a matter of taste.
 
 ## Constant Character Strings and Pointers
-* When a constant character string is passed as a function argument, what is actually passed is a pointer to the characxter string. Whever a constant chracter string is used in C, it is a pointer to that character string that is produced. Eg:
+When a constant character string is passed as a function argument, what is actually passed is a pointer to the characxter string. Whever a constant chracter string is used in C, it is a pointer to that character string that is produced. Eg:
 
     char *textPtr;
+    textPtr = "A character string.";
    
 
 assigns to <em>textPtr</em> a pointer to the constant character string "A character string." This type of assignment is not valid with a character array. Eg:
