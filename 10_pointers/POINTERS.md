@@ -54,3 +54,5 @@ Initializing an array in this manner does not store a pointer to the string "Thi
     char *text = "This is okay.";
 
 assigns to <em>text</em> a pointer to the character string "This is okay."
+
+A very helpful article on the subject of pointers to strings and constant character strings comes from [Carnegie Melon University](https://wiki.sei.cmu.edu/confluence/display/c/STR05-C.+Use+pointers+to+const+when+referring+to+string+literals)
