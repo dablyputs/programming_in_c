@@ -38,7 +38,7 @@ Which you choose is a matter of taste.
     char *textPtr;
     textPtr = "A character string.";
 
-assigns to textPtr a pointer to the constant charaster string "A character string." This type of assignment is not valid with a character array. Eg:
+assigns to textPtr a pointer to the constant character string "A character string." This type of assignment is not valid with a character array. Eg:
 
     char text[80];
     text = "This is not valid.";
@@ -47,8 +47,8 @@ is an invalid assignment statement. The only time C will permit this type of ass
 
     char text[80] = "This is okay.";
 
-Initializing an array in this manner does not store a pointer to the string "This is okay." It produces a pointer to the actual characters themselves inside the elements of the text array. Eg:
+Initializing an array in this manner does not store a pointer to the string "This is okay." It produces a pointer to the actual characters themselves inside the elements of the <em>text</em> array. Eg:
 
     char *text = "This is okay.";
 
-assigns to text a pointer to the character string "This is okay."
+assigns to <em>text</em> a pointer to the character string "This is okay."
