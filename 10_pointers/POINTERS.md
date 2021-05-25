@@ -25,8 +25,8 @@ The address operator isn't used in this case because the C compilter treats the 
 
 Here is the char array example:
 
-     textPtr = text;
+    textPtr = text;
 or
-     textPtr = &text[0];
+    textPtr = &text[0];
 
 Which you choose is a matter of taste.
