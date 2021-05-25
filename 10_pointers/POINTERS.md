@@ -42,6 +42,7 @@ assigns to <em>textPtr</em> a pointer to the constant character string "A charac
 
     char text[80];
     text = "This is not valid.";
+    
 
 is an invalid assignment statement. The only time C will permit this type of assignment to a character array is when initializing it. Eg:
 
