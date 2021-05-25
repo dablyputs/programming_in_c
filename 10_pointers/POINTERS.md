@@ -38,7 +38,7 @@ Which you choose is a matter of taste.
     char *textPtr;
     textPtr = "A character string.";
 
-assigns to textPtr a pointer to the constant character string "A character string." This type of assignment is not valid with a character array. Eg:
+assigns to <em>textPtr</em> a pointer to the constant character string "A character string." This type of assignment is not valid with a character array. Eg:
 
     char text[80];
     text = "This is not valid.";
