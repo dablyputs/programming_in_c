@@ -27,6 +27,7 @@ Here is the char array example:
 
     textPtr = text;
 or
+    
     textPtr = &text[0];
 
 Which you choose is a matter of taste.
