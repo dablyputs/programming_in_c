@@ -5,28 +5,31 @@
  */
 
 #include <stdio.h>
+#include <stdbool.h>
 
 #define MAXLEN 1000
 
 // Functions
-void replaceString(char [], const char [], const char []);
+bool replaceString(char [], const char [], const char []);
 int findString(const char [], const char []);
 void removeString(char [], int, int);
 void insertString(char [], const char [], int);
 int stringLength(const char []);
 
 // replace subString1 with subString2 in source
-void replaceString(char source[], const char subString1[], const char subString2[])
+bool replaceString(char source[], const char subString1[], const char subString2[])
 {
     int length, position;
 
     length = stringLength(subString1);
     if ((position = findString(source, subString1)) < 0)
     {
-        return; // No match
+        return false; // No match
     }
     removeString(source, position, length);
     insertString(source, subString2, position);
+
+    return true;
     
 }
 
@@ -37,8 +40,7 @@ int findString(const char source[], const char subString[])
 
     for (i = 0; source[i] != '\0'; i++)
     {
-        for (j = i, k = 0; source[j] != '\0' && 
-                source[j] == subString[k]; ++j, ++k )
+        for (j = i, k = 0; source[j] != '\0' && source[j] == subString[k]; ++j, ++k )
             ;
         if (subString[k] == '\0') // Found match
         {
@@ -53,15 +55,11 @@ void removeString(char source[], int position, int nCharacters)
 {
     int i, length;
 
-    
-    length = stringLength(source);
     // copy characters (including '\0') from index i to pos 
-    // for position plus nCharacters, overwrite
-    // to the end of the string. Effectively "shifts" the string
-    // back nCharacters to position 
+    length = stringLength(source);
     for (i = position + nCharacters; i <= length; ++i)
     {
-        source[position++] = source[i]; // in place increment of position
+        source[position++] = source[i];
     } 
 }
 
@@ -105,16 +103,15 @@ int stringLength(const char string[])
 
 int main(void)
 {
-    char text[MAXLEN] = "0123456789 ten *eleven.";
+    int stillFound;
+    char text[] = "a l p h a b e t";
 
-    char string[] = "I'm number 1, you're number 2.";
-    char subString1[] = "2";
-    char subString2[] = "two";
-
-    replaceString(string, subString1, subString2);
-    printf("%s\n", string);
-    replaceString(string, "1", "one");
-    printf("%s\n", string);
+    do
+    {
+        stillFound = replaceString(text, " ", "");
+    } while (stillFound);
+    
+    printf("%s\n", text);
 
 	return 0;
 }

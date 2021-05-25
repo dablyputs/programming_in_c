@@ -1,0 +1,1 @@
+String literals behave differently than arrays of characters.

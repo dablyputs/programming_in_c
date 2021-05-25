@@ -3,12 +3,16 @@
 ### Declaring and Using Functions
 To be able to define the [absoluteValue()](https://github.com/dablyputs/programming_in_c/blob/main/07_functions/ex4_newton_raphson_print_guess.c) function after the squareRoot() function in the Newton-Raphson exercises (or even in another file—see Chapter 14), you must declare the type of result returned by the absoluteValue() function before the function is called. The declaration can be made inside the squareRoot() function itself, or outside of any function. In the latter case, the declaration is usually made at the beginning of the program.
 
-* You just have to specify the argument type inside the parentheses, and not its name. You can optionally specify a “dummy” name after the type if you want.
+* You just have to specify the argument type inside the parentheses, and not its name. You can optionally specify a “dummy” name after the type if you want. Eg:
+
+    void myFunction(int [], int, float, struct structDefinition);
+
+defines a function that takes an array of integers, an int, a float and a struct.
 
 ### Here are some reminders and suggestions about functions:
 
 1. Remember that, by default, the compiler assumes that a function returns an int.
-2. When defining a function that returns an int, define it as such.
+2. When defining a function that returns an int, define it as such. This will make your code clearer.
 3. When defining a function that doesn’t return a value, define it as void.
 4. The compiler converts your arguments to agree with the ones the function expects only if you have previously defined or declared the function.
 5. To play it safe, declare all functions in your program, even if they are defined before they are called. (You might decide later to move them somewhere else in your file or even to another file.)
