@@ -56,3 +56,13 @@ Initializing an array in this manner does not store a pointer to the string "Thi
 assigns to <em>text</em> a pointer to the character string "This is okay."
 
 A very helpful article on the subject of pointers to strings and constant character strings comes from [Carnegie Melon University](https://wiki.sei.cmu.edu/confluence/display/c/STR05-C.+Use+pointers+to+const+when+referring+to+string+literals)
+
+## Operations on Pointers
+The confusion with pointers seems to boil down to operations performed on the pointer itself vs operations performed on the value which is pointed to. The location in memory, i.e. the pointer, can be manipulated by incrementing, decrementing or doing pointer arithematic whereas the value pointed to can be manipulated through the pointer based on whatever valid operations are permitted by the value being pointed to.
+
+### Pointer Subtraction
+Subtracting two pointers of the same type returns the result of the number of elements containted between the two pointers. E.g.:
+
+    n = p - x
+
+assigns to n (assumed to be an integer) the index number of the element inside x to which p points. See 

@@ -1,10 +1,12 @@
+// Function to copy one string to another. Pointer Ver. 2
 #include <stdio.h>
 
 void copyString(char *to, char *from)
 {
-    for ( ; *from != '\0'; )
+    while ( *from )
     {
-        *to++ = *from++; // Modified loop from page 361
+        *to++ = *from++; /* Modified loop from page 361.
+        statements of this type are commonly used in C */
     }
 
     *to = '\0';
