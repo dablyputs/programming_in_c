@@ -1,5 +1,5 @@
 # Chapter 10: Pointers
- 
+
 ## Pointers and Indirection
 
  * A pointer provides an indirect means of accessing the value of a particular data item.
@@ -70,3 +70,8 @@ Subtracting two pointers of the same type returns the result of the number of el
 assigns to n (assumed to be an integer) the index number of the element inside x to which p points. See example [example 10.15](https://github.com/dablyputs/programming_in_c/blob/main/10_pointers/10_15_string_length.c)
 
 ## Pointers to Functions
+Pointers to functions is an advanced technique and the syntax can be tricky. One common application is passing them as argument sto other functions. This technique is applied in the C Standard Library in the function qsort which takes a user supplied function which compares two elements in an array. 
+
+* [qsort on Tutorials Point](https://www.tutorialspoint.com/c_standard_library/c_function_qsort.htm)
+* [qsort on Wikipedia](https://en.wikipedia.org/wiki/Qsort)
+* [qsort on Geeks for Geeeks](https://www.geeksforgeeks.org/comparator-function-of-qsort-in-c/)
