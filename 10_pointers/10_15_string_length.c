@@ -5,14 +5,14 @@
 
 int stringLength(const char string[])
 {
-    const char *cptr = string;
+    const char *cptr = string; // assign pointer to string
 
     while (*cptr)
     {
         ++cptr;
     }
-
-    return cptr - string;
+    
+    return cptr - string; // Pointer subtraction
 }
 
 int main(void)
