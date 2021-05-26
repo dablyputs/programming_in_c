@@ -1,4 +1,7 @@
 # Chapter 10: Pointers
+At times, system programmers must access particular locations inside the computer's memory. One of the advantages of a higher level programming language such as C is that, although you don't have to concern yourself the memory addresses that ar assigned to variables, the knowledge that a unique memory address is associated with each variable and can be accessed through the use of pointers adds power and flexibility to the language.  
+
+The topic of pointers is difficult to grasp. Reread any sections of Chapter 10 that are still unclear.
 
 ## Pointers and Indirection
 
@@ -79,4 +82,4 @@ Pointers to functions is an advanced technique and the syntax can be tricky. One
 Another common application is to create <em>dispatch</em> tables where pointers to functions are stored as elements in an array.
 
 * [Dispatch Tables on Wikipedia](https://en.wikipedia.org/wiki/Dispatch_table)
-* [Blog Entry on Dispatch Tables](https://blog.alicegoldfuss.com/function-dispatch-tables/)
+* [Blog Entry on Dispatch Tables in C](https://blog.alicegoldfuss.com/function-dispatch-tables/)
