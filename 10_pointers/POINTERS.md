@@ -75,3 +75,8 @@ Pointers to functions is an advanced technique and the syntax can be tricky. One
 * [qsort on Tutorials Point](https://www.tutorialspoint.com/c_standard_library/c_function_qsort.htm)
 * [qsort on Wikipedia](https://en.wikipedia.org/wiki/Qsort)
 * [qsort on Geeks for Geeeks](https://www.geeksforgeeks.org/comparator-function-of-qsort-in-c/)
+
+Another common application is to create <em>dispatch</em> tables where pointers to functions are stored as elements in an array.
+
+* [Dispatch Tables on Wikipedia](https://en.wikipedia.org/wiki/Dispatch_table)
+* [Blog Entry on Dispatch Tables](https://blog.alicegoldfuss.com/function-dispatch-tables/)
