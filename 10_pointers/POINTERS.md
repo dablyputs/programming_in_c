@@ -1,3 +1,5 @@
+# Chapter 10: Pointers
+ 
 ## Pointers and Indirection
 
  * A pointer provides an indirect means of accessing the value of a particular data item.
@@ -66,3 +68,5 @@ Subtracting two pointers of the same type returns the result of the number of el
     n = p - x
 
 assigns to n (assumed to be an integer) the index number of the element inside x to which p points. See example [example 10.15](https://github.com/dablyputs/programming_in_c/blob/main/10_pointers/10_15_string_length.c)
+
+## Pointers to Functions
