@@ -1,5 +1,5 @@
 # Chapter 10: Pointers
-At times, system programmers must access particular locations inside the computer's memory. One of the advantages of a higher level programming language such as C is that, although you don't have to concern yourself the memory addresses that ar assigned to variables, the knowledge that a unique memory address is associated with each variable and can be accessed through the use of pointers adds power and flexibility to the language.  
+At times, system programmers must access particular locations inside the computer's memory. One of the advantages of a higher level programming language such as C is that, although you don't have to concern yourself the memory addresses that are assigned to variables, the knowledge that a unique memory address is associated with each variable and can be accessed through the use of pointers adds power and flexibility to the language.  
 
 The topic of pointers is difficult to grasp. Reread any sections of Chapter 10 that are still unclear.
 
@@ -38,23 +38,23 @@ or
 Which you choose is a matter of taste.
 
 ## Constant Character Strings and Pointers
-When a constant character string is passed as a function argument, what is actually passed is a pointer to the characxter string. Whever a constant chracter string is used in C, it is a pointer to that character string that is produced. Eg:
+When a constant character string is passed as a function argument, what is actually passed is a pointer to the character string. Whenever a constant chracter string is used in C, it is a pointer to that character string that is produced. E.g.:
 
     char *textPtr;
     textPtr = "A character string.";
    
 
-assigns to <em>textPtr</em> a pointer to the constant character string "A character string." This type of assignment is not valid with a character array. Eg:
+assigns to <em>textPtr</em> a pointer to the constant character string "A character string." This type of assignment is not valid with a character array. E.g.:
 
     char text[80];
     text = "This is not valid.";
 
 
-is an invalid assignment statement. The only time C will permit this type of assignment to a character array is when initializing it. Eg:
+is an invalid assignment statement. The only time C will permit this type of assignment to a character array is when initializing it. E.g.:
 
     char text[80] = "This is okay.";
 
-Initializing an array in this manner does not store a pointer to the string "This is okay." It produces a pointer to the actual characters themselves inside the elements of the <em>text</em> array. Eg:
+Initializing an array in this manner does not store a pointer to the string "This is okay." It produces a pointer to the actual characters themselves inside the elements of the <em>text</em> array. E.g.:
 
     char *text = "This is okay.";
 
