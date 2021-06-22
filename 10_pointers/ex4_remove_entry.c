@@ -39,6 +39,9 @@ void printList(struct entry *list)
 int main(int argc, char const *argv[])
 {
     struct entry s1, s2, s3, s4;
+    struct entry *list = &s1;
+    struct entry s0 = {0, &s1};
+
     s1.value = 100;
     s2.value = 200;
     s3.value = 300;
@@ -48,6 +51,11 @@ int main(int argc, char const *argv[])
     s2.next = &s3;
     s3.next = &s4;
     s4.next = NULL;
+
+    printList(list);
+    removeEntry(list);
+    list = s0.next;
+    printList(list);
 
     return 0;
 }
