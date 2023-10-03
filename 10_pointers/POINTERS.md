@@ -1,5 +1,9 @@
 # Chapter 10: Pointers
-At times, system programmers must access particular locations inside the computer's memory. One of the advantages of a higher level programming language such as C is that, although you don't have to concern yourself the memory addresses that are assigned to variables, the knowledge that a unique memory address is associated with each variable and can be accessed through the use of pointers adds power and flexibility to the language.  
+System programmers must access particular locations inside the computer's memory in order to:
+* Pass by reference
+    *  In C, function parameters are typically passed by value, which means that a copy of the argument is passed to the function. When you want to modify the original data inside a function and have those changes reflected outside the function, you use pointers to pass the memory address of the original data. This is known as passing by reference.
+
+     One of the advantages of a higher level programming language such as C is that, although you don't have to concern yourself the memory addresses that are assigned to variables, the knowledge that a unique memory address is associated with each variable and can be accessed through the use of pointers adds power and flexibility to the language.  
 
 The topic of pointers is difficult to grasp. Reread any sections of Chapter 10 that are still unclear.
 
