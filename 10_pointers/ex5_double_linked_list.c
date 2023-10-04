@@ -1,5 +1,5 @@
 /*
-    Define a doubly linked list and then write a small program that implements 
+    Define a doubly linked list and then write a small program that implements
     a small doubly linked list and prints out the elements of the list.
 */
 
@@ -20,16 +20,11 @@ void printlist(struct entry *list)
     for (int i = 1; list != NULL; i++)
     {
         printf("%i: (%p)\n", i, list);
-        printf("Value: %i\n", list->value);
-        printf("Next Node: %p\n", list->next);
-        printf("Previous node: %p\n", list->previous);
-        list = list->next;
+	    printf("Value: %i\n", list->value);
+	    printf("Next Node: %p\n", list->next);
+	    printf("Previous node: %p\n", list->previous);
+	    list = list->next;
     }
-}
-
-void insertentry(struct entry *newEntry, struct entry *listEntry)
-{
-
 }
 
 int main()

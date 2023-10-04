@@ -26,8 +26,10 @@ void printList(struct entry *list)
         printf(" next: %p\n", list->next);
         list = list->next;
     }
+    printf("\n");
 }
 
+// Takes the new entry, the 
 struct entry * insertEntry(struct entry *newEntry, struct entry *listEntry, struct entry *head)
 {
     if (listEntry == NULL)
@@ -69,6 +71,7 @@ int main(void)
     n6.next = NULL;
     n6.value = 600;
 
+    printList(head);
     head = insertEntry(&n6, &n1, head);
     printList(head);
     head = insertEntry(&newHead, NULL, head);
