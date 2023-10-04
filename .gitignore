@@ -1,3 +1,5 @@
 a.out
 .vscode
 .gitignore
+.vscode/settings.json
+.gitignore
