@@ -1,7 +1,7 @@
-/** Write a function called insertEntry() to insert a new entry into a linked list. 
- *  Have the procedure take as arguments a pointer to the list entry to be inserted 
- *  (of type struct entry as defined in this chapter), and a pointer to an element 
- *  in the list after which the new entry is to be inserted.                     
+/** Write a function called insertEntry() to insert a new entry into a linked list.
+ *  Have the procedure take as arguments a pointer to the list entry to be inserted
+ *  (of type struct entry as defined in this chapter), and a pointer to an element
+ *  in the list after which the new entry is to be inserted.
  **/
 
 #include <stdio.h>
@@ -17,22 +17,17 @@ void printList(struct entry *);
 
 void printList(struct entry *list)
 {
+    for (int i = 1; list != NULL; ++i)
     {
-        int i;
-
-        for (i = 1; list != NULL; ++i)
-        {
-            printf("\n%i (%p)\n", i, list);
-            printf(" value: %i\n", list->value);
-            printf(" next: %p\n", list->next);
-            list = list->next;
-        }
+        printf("\n%i (%p)\n", i, list);
+        printf(" value: %i\n", list->value);
+        printf(" next: %p\n", list->next);
+        list = list->next;
     }
 }
 
 void insertEntry(struct entry *newEntry, struct entry *listEntry)
 {
-    
     newEntry->next = listEntry->next;
     listEntry->next = newEntry;
 }
