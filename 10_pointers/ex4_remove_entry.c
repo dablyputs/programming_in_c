@@ -23,16 +23,12 @@ void removeEntry(struct entry *head)
 
 void printList(struct entry *list)
 {
+    for (int i = 1; list != NULL; ++i)
     {
-        int i;
-
-        for (i = 1; list != NULL; ++i)
-        {
-            printf("\n%i (%p)\n", i, list);
-            printf(" value: %i\n", list->value);
-            printf(" next: %p\n", list->next);
-            list = list->next;
-        }
+        printf("\n%i (%p)\n", i, list);
+        printf(" value: %i\n", list->value);
+        printf(" next: %p\n", list->next);
+        list = list->next;
     }
 }
 
@@ -59,4 +55,3 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
-

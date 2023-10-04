@@ -1,8 +1,9 @@
-#include <stdio.h>
+/*
+    Define a doubly linked list entry and then write a small program that implements 
+    a small doubly linked list and prints out the elements of the list.
+*/
 
-// Prototype definitions
-void printlist(struct entry *);
-void insertentry(struct entry *, struct entry *);
+#include <stdio.h>
 
 struct entry
 {
@@ -10,6 +11,10 @@ struct entry
     struct entry *next;
     struct entry *previous;
 };
+
+// Prototype definitions
+void printlist(struct entry *);
+void insertentry(struct entry *, struct entry *);
 
 void printlist(struct entry *list)
 {

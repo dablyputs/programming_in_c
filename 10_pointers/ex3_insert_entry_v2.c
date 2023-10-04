@@ -1,4 +1,5 @@
-/** The function developed in exercise 2 only inserts an element after an existing 
+/** 
+ * The function developed in exercise 2 only inserts an element after an existing 
  * element in the list, thereby preventing you from inserting a new entry at the front 
  * of the list. How can you use this same function and yet overcome this problem?
  * (Hint: Think about setting up a special structure to point to the beginning of the list.)                 
@@ -12,21 +13,18 @@ struct entry
     struct entry *next;
 };
 
-struct entry * insertEntry(struct entry *, struct entry *, struct entry *);
+struct entry *insertEntry(struct entry *, struct entry *, struct entry *);
 void printList(struct entry *);
 
 void printList(struct entry *list)
 {
-    {
-        int i;
 
-        for (i = 1; list != NULL; ++i)
-        {
-            printf("\n%i (%p)\n", i, list);
-            printf(" value: %i\n", list->value);
-            printf(" next: %p\n", list->next);
-            list = list->next;
-        }
+    for (int i = 1; list != NULL; ++i)
+    {
+        printf("\n%i (%p)\n", i, list);
+        printf(" value: %i\n", list->value);
+        printf(" next: %p\n", list->next);
+        list = list->next;
     }
 }
 
