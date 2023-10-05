@@ -1,6 +1,6 @@
 /*
-    Develop insertEntry() and removeEntry() functions for a doubly linked list that are similar in function 
-    to those developed in previous exercises for a singly linked list. Why can your removeEntry() function 
+    Develop insertEntry() and removeEntry() functions for a doubly linked list that are similar in function
+    to those developed in previous exercises for a singly linked list. Why can your removeEntry() function
     now take as its argument a direct pointer to the entry to be removed from the list?
 */
 
@@ -16,7 +16,7 @@ struct entry
 // Prototype definitions
 void printlist(struct entry *);
 void addentry(struct entry *, struct entry *);
-struct entry * removeentry(struct entry *);
+struct entry *removeentry(struct entry *);
 
 void printlist(struct entry *list)
 {
@@ -30,20 +30,21 @@ void printlist(struct entry *list)
     }
 }
 
+// My function only appends to the list
 void addentry(struct entry *listentry, struct entry *newEntry)
 {
     while (listentry->next != NULL)
     {
         listentry = listentry->next;
     }
-    printf("-------------------------\n\nAdding %p to %p\n\n----------------------\n", newEntry, listentry);
     listentry->next = newEntry;
     newEntry->next = NULL;
     newEntry->previous = listentry;
     newEntry->value = listentry->value + 100;
 }
 
-struct entry * removeentry(struct entry *delEntry)
+// This will remove any entry
+struct entry *removeentry(struct entry *delEntry)
 {
     // Set my head to the entry to be deleted
     struct entry *head = delEntry;
@@ -51,14 +52,12 @@ struct entry * removeentry(struct entry *delEntry)
     if (delEntry->next == NULL)
     {
         // If I'm at the end just set the pointer to me to null
-        printf("removing last element\n\n");
         delEntry->previous->next = NULL;
         head = delEntry->previous;
     }
     else if (delEntry->previous == NULL)
     {
         // If I'm at the beginning just set the next elements previous pointer to null
-        printf("removing first element\n\n");
         delEntry->next->previous = NULL;
         head = delEntry->next;
     }
@@ -66,7 +65,6 @@ struct entry * removeentry(struct entry *delEntry)
     else
     {
         // otherwise remove both pointers to me
-        printf("removing a middle element\n\n");
         delEntry->previous->next = delEntry->next;
         delEntry->next->previous = delEntry->previous;
         head = delEntry->previous;
