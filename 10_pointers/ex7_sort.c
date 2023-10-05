@@ -4,7 +4,9 @@ Be certain that pointers are exclusively used by the function, including index v
 */
 
 #include <stdio.h>
-
+// Not possible to create a pointer to N because it is defined by the preprocessor.
+// Attempting to take the address of N doesn't make sense because it's not 
+// a variable stored in memory.
 #define N 16
 
 void sort(int *a, int n, int o);
@@ -12,7 +14,12 @@ void sort(int *a, int n, int o);
 int main(void)
 {
     int array[N] = {34, -5, 6, 0, 12, 100, 56, 22, 44, -3, -9, 12, 17, 22, 6, 11};
-    int *valuesPtr = &array[0];
+
+    // c compiler treats the appearance of an array name without a subscript
+    // as a pointer to the array. Specifying values without a subscript creates
+    // a pointer to the first element of the array.
+    // Equivalent: valuesPtr = &values[0];
+    int *valuesPtr = array;
 
     printf("The array before the sort:\n");
 
@@ -38,6 +45,7 @@ int main(void)
 void sort (int *a, int n, int o)
 {
     int i, j, temp;
+    // Defining pointers of type int to point to an int
     int *tempPtr = &temp;
     int *iPtr = &i;
     int *jPtr = &j;
